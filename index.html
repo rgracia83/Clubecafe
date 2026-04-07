@@ -51,13 +51,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 3rem;
-    background: linear-gradient(to bottom, rgba(26,14,8,0.95), transparent);
+    padding: 1rem 3rem;
+    background: rgba(28, 16, 8, 0.97);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(200,151,58,0.15);
   }
 
   .logo svg {
-    height: 38px;
+    filter: drop-shadow(0 1px 6px rgba(0,0,0,0.6));
+  }
+
+  .logo svg {
+    height: 42px;
     width: auto;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.5));
   }
 
   nav a {
@@ -703,34 +710,37 @@
 <nav>
   <div class="logo">
     <svg viewBox="0 0 220 44" xmlns="http://www.w3.org/2000/svg" aria-label="Grão do Monte">
-      <!-- Grão -->
+      <defs>
+        <filter id="tshadow" x="-5%" y="-5%" width="110%" height="130%">
+          <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.7"/>
+        </filter>
+      </defs>
       <text x="0" y="28"
         font-family="Cormorant Garamond, serif"
         font-size="26" font-weight="600"
         letter-spacing="1"
-        fill="#f4ead8">Grão</text>
-      <!-- do — italic, gold -->
+        fill="#ffffff"
+        filter="url(#tshadow)">Grão</text>
       <text x="72" y="28"
         font-family="Cormorant Garamond, serif"
         font-size="22" font-weight="400"
         font-style="italic"
         letter-spacing="1"
-        fill="#c8973a"> do</text>
-      <!-- Monte -->
+        fill="#c8973a"
+        filter="url(#tshadow)"> do</text>
       <text x="104" y="28"
         font-family="Cormorant Garamond, serif"
         font-size="26" font-weight="600"
         letter-spacing="1"
-        fill="#f4ead8"> Monte</text>
-      <!-- thin underline accent -->
+        fill="#ffffff"
+        filter="url(#tshadow)"> Monte</text>
       <line x1="0" y1="34" x2="218" y2="34"
-        stroke="#c8973a" stroke-width="0.6" opacity="0.5"/>
-      <!-- tiny label -->
+        stroke="#c8973a" stroke-width="0.6" opacity="0.6"/>
       <text x="0" y="43"
         font-family="Jost, sans-serif"
         font-size="7" font-weight="400"
         letter-spacing="3.5"
-        fill="#7d6a54">CLUBE DE CAFÉ</text>
+        fill="#a08060">CLUBE DE CAFÉ</text>
     </svg>
   </div>
   <div class="nav-links">
@@ -813,246 +823,4 @@
         <h3>Escolhes como queres entrar</h3>
         <p>Só o café, se já tens máquina. Ou o conjunto completo com uma De'Longhi a um preço que não encontras em nenhuma loja.</p>
       </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-icon">📦</div>
-        <h3>O primeiro lote chega a casa</h3>
-        <p>Logo na adesão recebes o teu pack de boas-vindas com um café de selecção e a ficha completa de onde veio e como foi tratado.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-icon">🗺️</div>
-        <h3>Cada mês, uma descoberta nova</h3>
-        <p>Etiópia, Colômbia, Açores, Brasil — vais conhecer cafés que dificilmente encontrarias sozinho. 250g de grão, todo o mês.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-icon">✋</div>
-        <h3>Tu é que mandas</h3>
-        <p>Pausa, cancela ou muda de pack quando quiseres. Sem truques, sem letras miúdas. Aqui não prendemos ninguém.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PACKS -->
-<section id="packs" class="packs-section">
-  <div class="packs-inner">
-    <p class="section-label">Duas formas de começar</p>
-    <h2 class="section-title">Entra como <em>te faz mais sentido</em></h2>
-    <div class="packs-grid">
-
-      <div class="pack-card">
-        <div class="pack-icon">☕</div>
-        <h3 class="pack-name">Só o Café</h3>
-        <p class="pack-tagline">Para quem já tem a sua máquina em casa</p>
-        <ul class="pack-features">
-          <li>Pack de boas-vindas com lote de estreia</li>
-          <li>250g de café em grão todos os meses</li>
-          <li>Origens nacionais e internacionais</li>
-          <li>Ficha com a história de cada café</li>
-          <li>Entrega em casa incluída</li>
-          <li>Cancela quando quiseres</li>
-        </ul>
-        <div class="pack-price">
-          <span class="price-from">A partir de</span>
-          <span class="price-amount">€X</span>
-          <span class="price-period">/mês</span>
-        </div>
-        <a href="#entrar" class="btn-primary">Quero este pack</a>
-      </div>
-
-      <div class="pack-card featured">
-        <div class="pack-badge">Mais popular</div>
-        <div class="pack-icon">🫘</div>
-        <h3 class="pack-name">Café e Máquina</h3>
-        <p class="pack-tagline">Começas do zero, com tudo tratado</p>
-        <ul class="pack-features">
-          <li>Máquina De'Longhi a preço de parceria exclusiva</li>
-          <li>Pack de boas-vindas com lote de estreia</li>
-          <li>250g de café em grão todos os meses</li>
-          <li>Origens nacionais e internacionais</li>
-          <li>Ficha com a história de cada café</li>
-          <li>Tudo entregue em casa de uma vez</li>
-          <li>Cancela quando quiseres</li>
-        </ul>
-        <div class="pack-price">
-          <span class="price-from">A partir de</span>
-          <span class="price-amount">€X</span>
-          <span class="price-period">/mês</span>
-        </div>
-        <a href="#entrar" class="btn-primary">Quero este pack</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ORIGINS -->
-<section class="origins-section">
-  <p class="section-label">De onde vem o teu café</p>
-  <h2 class="section-title">Origens que nos <em>ficaram na memória</em></h2>
-  <div class="origins-grid">
-    <div class="origin-card">
-      <div class="origin-flag">🇪🇹</div>
-      <h4 class="origin-name">Etiópia</h4>
-      <p class="origin-region">Yirgacheffe · Sidama</p>
-      <p class="origin-desc">Onde o café nasceu. Cheira a jasmim, sabe a frutos vermelhos. Um dos primeiros que enviámos e que toda a gente pediu para repetir.</p>
-    </div>
-    <div class="origin-card">
-      <div class="origin-flag">🇨🇴</div>
-      <h4 class="origin-name">Colômbia</h4>
-      <p class="origin-region">Huila · Nariño</p>
-      <p class="origin-desc">Aquele café que agrada a toda a gente. Caramelo, noz, acidez suave. Cultivado acima dos 1800 metros de altitude.</p>
-    </div>
-    <div class="origin-card">
-      <div class="origin-flag">🇵🇹</div>
-      <h4 class="origin-name">Açores</h4>
-      <p class="origin-region">São Miguel</p>
-      <p class="origin-desc">O único café europeu que existe. Terroir vulcânico, corpo suave, aroma a terra molhada depois da chuva. Difícil de explicar, fácil de perceber na chávena.</p>
-    </div>
-    <div class="origin-card">
-      <div class="origin-flag">🇧🇷</div>
-      <h4 class="origin-name">Brasil</h4>
-      <p class="origin-region">Minas Gerais · Sul de Minas</p>
-      <p class="origin-desc">Chocolate, avelã e um corpo que se sente. Perfeito para espresso. Processo honey que lhe dá um toque adocicado natural.</p>
-    </div>
-    <div class="origin-card">
-      <div class="origin-flag">🇯🇵</div>
-      <h4 class="origin-name">Japão</h4>
-      <p class="origin-region">Okinawa · Ogasawara</p>
-      <p class="origin-desc">Raro mesmo. Cultivado à mão em ilhas subtropicais. Para quem gosta de ter algo que os amigos nunca provaram.</p>
-    </div>
-    <div class="origin-card">
-      <div class="origin-flag">🌍</div>
-      <h4 class="origin-name">E há muito mais...</h4>
-      <p class="origin-region">Cada mês uma surpresa</p>
-      <p class="origin-desc">Guatemala, Quénia, Panamá, Timor, Costa Rica. O mundo é grande e a lista de cafés que queremos partilhar contigo, maior ainda.</p>
-    </div>
-  </div>
-</section>
-
-<!-- DE'LONGHI PARTNER -->
-<div class="section" style="padding-top:0">
-  <div class="partner-section">
-    <div class="partner-text">
-      <p class="partner-tag">Parceria exclusiva</p>
-      <h3 class="partner-title">De'Longhi × Grão do Monte</h3>
-      <p class="partner-desc">
-        Trabalhámos com a De'Longhi para que os membros do clube possam aceder a máquinas automáticas de moagem a um preço que não existe nas lojas. Porque achamos que um bom café merece uma boa máquina — e que não devias ter de escolher entre os dois.
-      </p>
-      <a href="#entrar" class="btn-primary" style="display:inline-block">Ver pack com máquina</a>
-    </div>
-    <div class="partner-visual">
-      <!-- Coffee machine SVG illustration -->
-      <svg class="machine-svg" viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg">
-        <rect x="30" y="30" width="100" height="160" rx="12" fill="rgba(245,237,224,0.06)" stroke="rgba(212,168,85,0.3)" stroke-width="1.5"/>
-        <rect x="45" y="45" width="70" height="45" rx="6" fill="rgba(212,168,85,0.1)" stroke="rgba(212,168,85,0.25)" stroke-width="1"/>
-        <circle cx="80" cy="67" r="15" fill="none" stroke="rgba(212,168,85,0.4)" stroke-width="1.5"/>
-        <circle cx="80" cy="67" r="8" fill="rgba(212,168,85,0.15)"/>
-        <rect x="55" y="105" width="50" height="8" rx="4" fill="rgba(245,237,224,0.1)"/>
-        <rect x="60" y="120" width="40" height="6" rx="3" fill="rgba(200,118,58,0.2)"/>
-        <rect x="65" y="145" width="30" height="25" rx="4" fill="rgba(245,237,224,0.05)" stroke="rgba(212,168,85,0.2)" stroke-width="1"/>
-        <line x1="80" y1="170" x2="80" y2="185" stroke="rgba(200,118,58,0.4)" stroke-width="2"/>
-        <ellipse cx="80" cy="187" rx="12" ry="4" fill="rgba(200,118,58,0.15)" stroke="rgba(200,118,58,0.3)" stroke-width="1"/>
-        <text x="80" y="215" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" fill="rgba(212,168,85,0.5)" letter-spacing="2">DE'LONGHI</text>
-      </svg>
-    </div>
-  </div>
-</div>
-
-<!-- LEAD FORM -->
-<section id="entrar" class="form-section">
-  <div class="form-inner">
-    <p class="form-label">Pré-lançamento</p>
-    <h2 class="form-title">Entra na lista<br><em>antes de toda a gente</em></h2>
-    <p class="form-sub">
-      O Grão do Monte ainda não abriu ao público. Deixa o teu contacto e avisamos-te assim que estiver pronto — com condições especiais para quem acredita cedo.
-    </p>
-
-    <form class="lead-form" id="leadForm">
-      <div class="form-row">
-        <div class="form-field">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="O teu nome" required>
-        </div>
-        <div class="form-field">
-          <label for="apelido">Apelido</label>
-          <input type="text" id="apelido" name="apelido" placeholder="Apelido" required>
-        </div>
-      </div>
-      <div class="form-field">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="o.teu@email.com" required>
-      </div>
-      <div class="form-field">
-        <label for="telefone">Telemóvel (opcional)</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="+351 9XX XXX XXX">
-      </div>
-      <div class="form-field">
-        <label for="interesse">O que te interessa mais?</label>
-        <select id="interesse" name="interesse">
-          <option value="" disabled selected>Selecciona uma opção</option>
-          <option value="cafe">Só o café mensal</option>
-          <option value="maquina">Café e máquina De'Longhi</option>
-          <option value="ambos">Ainda não sei, quero saber mais</option>
-        </select>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" id="rgpd" name="rgpd" required>
-        <label for="rgpd">Aceito receber novidades sobre o lançamento do Grão do Monte. Podes sair da lista quando quiseres, sem complicações.</label>
-      </div>
-      <button type="submit" class="btn-submit">Quero entrar na lista →</button>
-      <p class="form-privacy">🔒 Os teus dados ficam cá. Não partilhamos nada com ninguém.</p>
-    </form>
-
-    <div class="success-msg" id="successMsg">
-      <h3>☕ Está feito!</h3>
-      <p>Já estás na lista. Assim que abrirmos, és dos primeiros a saber — com condições de quem entrou cedo.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="logo">
-    <svg viewBox="0 0 220 44" xmlns="http://www.w3.org/2000/svg" aria-label="Grão do Monte">
-      <text x="0" y="28" font-family="Cormorant Garamond, serif" font-size="26" font-weight="600" letter-spacing="1" fill="#f4ead8">Grão</text>
-      <text x="72" y="28" font-family="Cormorant Garamond, serif" font-size="22" font-weight="400" font-style="italic" letter-spacing="1" fill="#c8973a"> do</text>
-      <text x="104" y="28" font-family="Cormorant Garamond, serif" font-size="26" font-weight="600" letter-spacing="1" fill="#f4ead8"> Monte</text>
-      <line x1="0" y1="34" x2="218" y2="34" stroke="#c8973a" stroke-width="0.6" opacity="0.5"/>
-      <text x="0" y="43" font-family="Jost, sans-serif" font-size="7" font-weight="400" letter-spacing="3.5" fill="#7d6a54">CLUBE DE CAFÉ</text>
-    </svg>
-  </div>
-  <p>© 2025 Grão do Monte. Todos os direitos reservados.</p>
-  <p>Portugal · Entrega em todo o território nacional</p>
-</footer>
-
-<script>
-  // Form submit
-  document.getElementById('leadForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    this.style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
-    // Aqui integras com o teu CRM / Mailchimp / ActiveCampaign
-  });
-
-  // Fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.step, .pack-card, .origin-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-  });
-</script>
-</body>
-</html>
+      <
